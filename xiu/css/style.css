@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+.content{width:1200px;margin:0 auto;}
+
+header{
+	height: 78px;
+	}
+header .hd-l{
+	float: left;
+	display: flex;
+	width: 170px;
+	justify-content: space-between;
+	padding:10px 22px;
+	box-sizing: border-box;
+	}	
+header .logo{
+	float: left;
+	margin: 20px 146px 20px 308px ;
+	}
+header .search{
+	float: right;
+	display: flex;
+	margin: 10px 28px 0 0;
+}
+header .search input{
+	height: 30px;
+	width: 268px;
+	box-sizing: border-box;
+	border: 1px solid #c39a58;
+	border-right:0 ;
+	padding:0 8px ;
+}
+nav{
+	background-color: #111;
+	height: 40px;
+}
+nav ul{
+	width: 590px;
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+	
+}
+nav ul li{
+	cursor: pointer;
+	box-sizing: border-box;
+}
+nav ul li a{
+	font-size: 14px;
+	line-height: 38px;
+	display: block;
+	color: #fff;
+	padding: 0 15px;
+}
+nav ul li.active{
+	border-bottom: 2px solid #C39A58;
+}
+nav ul li.active a{
+	color: #c39a58;
+}
+#menu{
+	background-color: #f7f7f7;
+	height: 44px;
+}
+#menu .menu1{
+	width: 720px;
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+#menu .menu1 .li01{
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 44px;
+	color: #111;
+	padding: 0 15px;
+}
+#menu .menu1 .li01.active{
+	background-color: #fff;
+	border-right:1px solid #d7d7d7 ;
+	border-left:1px solid #d7d7d7 ;
+	position: relative;
+}
+#menu .menu1 .li01.active .menu2{
+	width: 450px;
+	height:300px;
+	border: 1px solid #D7D7D7;
+	position: absolute;
+	left: 0;
+	top: 44px;
+	background: #fff;
+}
+#menu .menu1 .li01.active .menu2 h3{
+	font-size: 14px;
+	font-weight: 700;
+	padding:30px 0 10px 10px;
+}
+#menu .menu1 .li01.active .menu2 ul{
+	padding-left:10px ;
+	overflow: hidden;
+}
+#menu .menu1 .li01.active .menu2 ul li{
+	float: left;
+	font-size: 14px;
+	color: #333;
+	margin-right:10px ;
+	border-right:1px solid #D7D7D7;
+	cursor: pointer;
+	padding-right:10px ;
+	line-height: 14px;
+	margin-bottom: 10px;
+}
+#menu .menu1 .li01.active .menu2 ul li:last-child{
+	border-right:none ;
+}
+#banner{
+	padding: 30px 0;
+}
+#banner img{
+	display: block;
+}
+.title{
+	text-align: center;
+}
+.title p{
+	line-height: 76px;
+	font-size: 36px;
+	
+}
+#goods{
+	
+}
+#goods ul{
+	width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:wrap ;
+}
+#goods ul li{
+	margin-bottom: 10px;
+	transition: 0.5s linear transform;
+}
+#goods ul li img{
+	display: block;
+	width: 392px;
+	height: 285px;
+}
+#goods ul li:hover{
+	transform: scale(1.06);
+}
+#find{
+	
+}
+#find ul{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:wrap ;
+}
+#find ul li{
+	height: 463px;
+	width: 300px;
+	
+}
+#find ul li img{
+	width: 270px;
+	height: 330px;
+	display: block;
+	margin: 0 auto;
+}
+#find ul li p{
+	
+}
+#find ul li h3{
+	
+}
+#find ul li span{
+	
+}
+
+
+
+
