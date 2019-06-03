@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+.content{width:1200px;margin:0 auto;}
+
+nav{
+	background-color: #111;
+	height: 40px;
+}
+nav ul{
+	width: 590px;
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+	
+}
+nav ul li{
+	cursor: pointer;
+	box-sizing: border-box;
+}
+nav ul li a{
+	font-size: 14px;
+	line-height: 38px;
+	display: block;
+	color: #fff;
+	padding: 0 15px;
+}
+nav ul li.active{
+	border-bottom: 2px solid #C39A58;
+}
+nav ul li.active a{
+	color: #c39a58;
+}
+
+
+
+
+
+
+#promise{
+	height: 100px;
+}
+#promise ul{
+	width: 856px;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+}
+#promise ul li{
+	width: 120px;
+	height: 40px;
+}
+#promise ul li i{
+	float: left;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background:url(../../img/icon.png) no-repeat;
+}
+#promise ul li i.t1{
+	background-position:center;
+}
+#promise ul li i.t2{
+	background-position:bottom;
+}
+
+#promise ul li span{
+	float: left;
+	color: #666;
+	font: 16px/40px "";
+	padding-left: 16px;
+}
+footer{
+	background: #111;
+	height: 278px;
+}
+footer .content{
+	display: flex;
+	align-items: center;
+		height: 278px;
+}
+footer .left{
+	width: 300px;
+	height: 185px;
+	border-right: 1px solid #aaa;
+	padding: 0 50px;
+	box-sizing: border-box;
+}
+footer .left .l1{
+	display: block;
+	margin-bottom: 30px;
+}
+footer .left .l2{
+	display: block;
+}
+footer .left2{
+	width: 157px;
+	height: 185px;
+	border-right: 1px solid #aaa;
+	padding: 0 50px;
+	box-sizing: border-box;
+}
+footer .left2 li{
+	width:56px;
+	font-size: 14px;
+	color: #aaa;
+	margin-bottom: 20px;
+}
+footer .center{
+	width: 307px;
+	height: 185px;
+	border-right: 1px solid #aaa;
+	padding: 0 50px;
+}
+footer .center p{
+	font-size: 14px;
+	color: #aaa;	
+}
+footer .center img{
+	margin-top: 30px;
+}
+footer .right{
+	width: 204px;
+	height: 185px;
+	padding: 0 30px 0 50px;
+}
+footer .right p{
+	font-size: 14px;
+	color: #aaa;
+}
+footer .right .img1{
+	display: block;
+	margin: 15px 0 23px 0;
+}

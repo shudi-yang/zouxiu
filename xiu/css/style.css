@@ -69,37 +69,46 @@ nav ul li.active a{
 	justify-content: space-between;
 }
 #menu .menu1 .li01{
+	width: auto; height: 44px;
+	position: relative; left: 0; top: 0;
 	cursor: pointer;
 	font-size: 14px;
 	line-height: 44px;
 	color: #111;
-	padding: 0 15px;
 }
-#menu .menu1 .li01.active{
+#menu .menu1 .li01 p{
+	height: 100%;
+	padding: 0 15px;
+	position: relative; left: 0; top: 0;
+	z-index: 66;
+}
+#menu .menu1 li.li01 .menu2{
+	width: 450px; height:300px;
+	border: 1px solid #D7D7D7;
+	background: #fff;
+	position: absolute; left: 0; top: 44px;
+	z-index: 22;
+	display: none;
+}
+#menu .menu1 li.li01:hover p{
 	background-color: #fff;
 	border-right:1px solid #d7d7d7 ;
 	border-left:1px solid #d7d7d7 ;
-	position: relative;
+	border-bottom:#fff solid 1px;
 }
-#menu .menu1 .li01.active .menu2{
-	width: 450px;
-	height:300px;
-	border: 1px solid #D7D7D7;
-	position: absolute;
-	left: 0;
-	top: 44px;
-	background: #fff;
+#menu .menu1 li.li01:hover .menu2{
+	display: block;
 }
-#menu .menu1 .li01.active .menu2 h3{
+#menu .menu1 li.li01 .menu2 h3{
 	font-size: 14px;
 	font-weight: 700;
 	padding:30px 0 10px 10px;
 }
-#menu .menu1 .li01.active .menu2 ul{
+#menu .menu1 li.li01 .menu2 ul{
 	padding-left:10px ;
 	overflow: hidden;
 }
-#menu .menu1 .li01.active .menu2 ul li{
+#menu .menu1 li.li01 .menu2 ul li{
 	float: left;
 	font-size: 14px;
 	color: #333;
@@ -110,15 +119,28 @@ nav ul li.active a{
 	line-height: 14px;
 	margin-bottom: 10px;
 }
-#menu .menu1 .li01.active .menu2 ul li:last-child{
+#menu .menu1 li.li01 .menu2 ul li:last-child{
 	border-right:none ;
 }
 #banner{
 	padding: 30px 0;
 }
-#banner img{
-	display: block;
+#banner .swiper-container{
+	width: 1200px;
+	height: 610px;
+	overflow: hidden;
 }
+#banner .swiper-container .swiper-pagination-bullets{
+	bottom: 16px;
+}
+#banner .swiper-container .swiper-pagination-bullet{
+	width: 15px; height: 15px;
+	margin: 0 7px;
+}
+#banner .swiper-container .swiper-pagination-bullet-active{
+	background: #707070;
+}
+	
 .title{
 	text-align: center;
 }
@@ -149,7 +171,7 @@ nav ul li.active a{
 	transform: scale(1.06);
 }
 #find{
-	
+	padding-bottom: 120px;
 }
 #find ul{
 	display: flex;
@@ -159,7 +181,12 @@ nav ul li.active a{
 #find ul li{
 	height: 463px;
 	width: 300px;
-	
+	padding: 5px 0;
+}
+#find ul li div{
+	height: 446px;
+	width: 280px;
+	margin: 0 auto;
 }
 #find ul li img{
 	width: 270px;
@@ -168,15 +195,120 @@ nav ul li.active a{
 	margin: 0 auto;
 }
 #find ul li p{
-	
+	font-size: 18px;
+	color: #111;
+	font-weight: 500;
+	margin-top: 10px;
+	padding: 0 20px;
 }
 #find ul li h3{
-	
+	color: #ccc;
+	font:16px/36px "" ;
+	padding: 0 20px;
 }
 #find ul li span{
-	
+	font:18px/38px "" ;
+	color: #111;
+	font-weight: 500;
+	padding: 0 20px;
+}
+#find ul li div:hover{
+	box-shadow:  0px 0px 5px 5px rgba(0,0,0,.2);
+}
+#promise{
+	height: 100px;
+}
+#promise ul{
+	width: 856px;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+}
+#promise ul li{
+	width: 120px;
+	height: 40px;
+}
+#promise ul li i{
+	float: left;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background:url(../img/icon.png) no-repeat;
+}
+#promise ul li i.t1{
+	background-position:center;
+}
+#promise ul li i.t2{
+	background-position:bottom;
 }
 
-
-
-
+#promise ul li span{
+	float: left;
+	color: #666;
+	font: 16px/40px "";
+	padding-left: 16px;
+}
+footer{
+	background: #111;
+	height: 278px;
+}
+footer .content{
+	display: flex;
+	align-items: center;
+		height: 278px;
+}
+footer .left{
+	width: 300px;
+	height: 185px;
+	border-right: 1px solid #aaa;
+	padding: 0 50px;
+	box-sizing: border-box;
+}
+footer .left .l1{
+	display: block;
+	margin-bottom: 30px;
+}
+footer .left .l2{
+	display: block;
+}
+footer .left2{
+	width: 157px;
+	height: 185px;
+	border-right: 1px solid #aaa;
+	padding: 0 50px;
+	box-sizing: border-box;
+}
+footer .left2 li{
+	width:56px;
+	font-size: 14px;
+	color: #aaa;
+	margin-bottom: 20px;
+}
+footer .center{
+	width: 307px;
+	height: 185px;
+	border-right: 1px solid #aaa;
+	padding: 0 50px;
+}
+footer .center p{
+	font-size: 14px;
+	color: #aaa;	
+}
+footer .center img{
+	margin-top: 30px;
+}
+footer .right{
+	width: 204px;
+	height: 185px;
+	padding: 0 30px 0 50px;
+}
+footer .right p{
+	font-size: 14px;
+	color: #aaa;
+}
+footer .right .img1{
+	display: block;
+	margin: 15px 0 23px 0;
+}
