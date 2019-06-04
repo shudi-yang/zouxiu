@@ -84,7 +84,6 @@ nav ul li.active a{
 	padding: 0 15px;
 	position: relative; left: 0; top: 0;
 	z-index: 66;
-<<<<<<< HEAD
 }
 #menu .menu1 li.li01 .menu2{
 	width: 450px; height:300px;
@@ -94,17 +93,6 @@ nav ul li.active a{
 	z-index: 22;
 	display: none;
 }
-=======
-}
-#menu .menu1 li.li01 .menu2{
-	width: 450px; height:300px;
-	border: 1px solid #D7D7D7;
-	background: #fff;
-	position: absolute; left: 0; top: 44px;
-	z-index: 22;
-	display: none;
-}
->>>>>>> 5c95f421559dd1ccf1b21028c23ec24c1fc2e159
 #menu .menu1 li.li01:hover p{
 	background-color: #fff;
 	border-right:1px solid #d7d7d7 ;
@@ -137,88 +125,20 @@ nav ul li.active a{
 #menu .menu1 li.li01 .menu2 ul li:last-child{
 	border-right:none ;
 }
-#banner{
-	padding: 30px 0;
-}
-#banner .swiper-container{
-	width: 1200px;
-	height: 610px;
-	overflow: hidden;
-}
-#banner .swiper-container .swiper-pagination-bullets{
-	bottom: 16px;
-}
-#banner .swiper-container .swiper-pagination-bullet{
-	width: 15px; height: 15px;
-	margin: 0 7px;
-<<<<<<< HEAD
-	background: #333;
-}
-#banner .swiper-container .swiper-pagination-bullet-active{
-	background: #111;
-}
-=======
-}
-#banner .swiper-container .swiper-pagination-bullet-active{
-	background: #707070;
-}
->>>>>>> 5c95f421559dd1ccf1b21028c23ec24c1fc2e159
-	
-.title{
-	text-align: center;
-}
-.title p{
-	line-height: 76px;
-	font-size: 36px;
-	
-}
-#goods{
-	
-}
-#goods ul{
-	width: 1200px;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap:wrap ;
-}
-#goods ul li{
-	margin-bottom: 10px;
-	transition: 0.5s linear transform;
-}
-#goods ul li img{
-	display: block;
-	width: 392px;
-	height: 285px;
-}
-#goods ul li:hover{
-	transform: scale(1.06);
-}
+
 #find{
-	padding-bottom: 120px;
-<<<<<<< HEAD
-	
-=======
->>>>>>> 5c95f421559dd1ccf1b21028c23ec24c1fc2e159
+	padding-top:30px ;
+	padding-bottom: 100px;
 }
 #find ul{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap:wrap ;
-	cursor: pointer;
 }
 #find ul li{
 	height: 463px;
 	width: 300px;
 	padding: 5px 0;
-<<<<<<< HEAD
-	
-=======
-}
-#find ul li div{
-	height: 446px;
-	width: 280px;
-	margin: 0 auto;
->>>>>>> 5c95f421559dd1ccf1b21028c23ec24c1fc2e159
 }
 #find ul li div{
 	height: 446px;

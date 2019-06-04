@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-//轮播
-=======
->>>>>>> 5c95f421559dd1ccf1b21028c23ec24c1fc2e159
-var mySwiper = new Swiper ('.swiper-container', {
-    //direction: 'vertical',
-    loop: true,
-    
-    // 如果需要分页器
-    pagination: '.swiper-pagination',
-    
-    // 如果需要前进后退按钮
-<<<<<<< HEAD
-    //nextButton: '.swiper-button-next',
-    //prevButton: '.swiper-button-prev',
-    
-    // 如果需要滚动条
-    //scrollbar: '.swiper-scrollbar',
-=======
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    
-    // 如果需要滚动条
-    scrollbar: '.swiper-scrollbar',
->>>>>>> 5c95f421559dd1ccf1b21028c23ec24c1fc2e159
-    
-    autoplay: 2000,
-	autoplayDisableOnInteraction: true,
-	observer:true, //修改swiper自己或子元素时，自动初始化swiper
-	observeParents:true //修改swiper的父元素时，自动初始化swiper
-<<<<<<< HEAD
-}) ;
-
-
 //登录注册
 class Index{
     constructor(){
@@ -92,14 +58,14 @@ class Index{
 new Index;
 
 
-
 //商品数据
 class Shopping{
 	constructor(){
 		this.ocont = document.querySelector("#find ul");
 		console.log(this.ocont)
-		this.url = "http://localhost/xiu/data/goods.json";
-		this.init();	
+		this.url = "http://localhost/htdocs/xiu/com-list/data/goods.json";
+		this.init();
+		this.lilength = 0;
 	}
 	init(){
 		var that = this;
@@ -107,8 +73,8 @@ class Shopping{
 			url:this.url,
 			success:function(res){
 				that.res = JSON.parse(res);
-				that.display();
-					
+				that.lilength = that.res.length;
+				that.display();				
 			}
 		})
 	}
@@ -126,18 +92,85 @@ class Shopping{
 					</li>`
 		}
 		this.ocont.innerHTML = str;
+		this.ali = document.querySelectorAll("#find ul li");
 		this.ocont.style.cursor = "pointer";
-//		this.ali = document.querySelectorAll("#find ul li")
-		this.addEvent()		
+		this.addEvent();
+		this.lazy()
 	}
 	addEvent(){
-		this.ocont.onclick = function(){
-			location.href = "com-detail/detail.html";
+		for (var i=0;i<this.ali.length;i++) {
+			this.ali[i].style.cursor = "pointer";
+			this.ali[i].onclick = function(){
+				location.href = "../com-detail/detail.html";
+			}				
 		}
+	}
+	lazy(){
+		this.clientH = document.documentElement.clientHeight;
+		var on = 1;
+		var that = this;
+		onscroll = function(){
+		    that.lazyLog();
+		}		
+	}
+	lazyLog(){
+	    this.scrollT = document.documentElement.scrollTop;
+	    //console.log(this.clientH, this.ali[this.lilength-1].offsetTop, this.scrollT)
+	    
+	    if(this.ali[this.lilength-2].offsetTop<this.scrollT){
+	    	console.log('loading + 1');
+	    	this.displaytwo();
+	    	this.lilength += this.res.length;
+	    	this.ali = document.querySelectorAll("#find ul li");
+	    }
 	}	
+	displaytwo(){
+		for(var i=0;i<this.res.length;i++){
+/*			str += `<li>
+						<div class="box">
+							<img  src="${this.res[i].src}"/>
+							<p>Burberry</p>
+							<h3>${this.res[i].name}</h3>
+							<span>${this.res[i].price}</span>
+						</div>	
+					</li>`*/
+			var img = document.createElement("img");
+			img.src = this.res[i].src;
+			var p = document.createElement("p");
+			p.innerHTML = "Burberry";
+			var h3 = document.createElement("h3");
+			img.innerHTML = this.res[i].name;
+			var span = document.createElement("span");
+			img.innerHTML = this.res[i].price;			
+			var box = document.createElement("div");
+			box.className = "box";
+			box.appendChild(img);
+			box.appendChild(p);
+			box.appendChild(h3);
+			box.appendChild(span);
+			var li = document.createElement("li")
+			li.appendChild(box);
+			this.ocont.appendChild(li)
+		}
+	}
+	
 }
 new Shopping;
 
-=======
-})        
->>>>>>> 5c95f421559dd1ccf1b21028c23ec24c1fc2e159
+
+//懒加载
+
+/*function lazyLog(arr){
+    var scrollT = document.documentElement.scrollTop;
+    
+    for(var i=0;i<arr.length;i++){
+        if(on == 0) continue;
+
+        if(arr[i].offsetTop < clientH + scrollT){      		
+				new Shopping();
+				on = 0;
+        }
+    }
+}*/
+
+

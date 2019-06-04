@@ -30,12 +30,81 @@ nav ul li.active{
 nav ul li.active a{
 	color: #c39a58;
 }
+<<<<<<< HEAD
+#form{
+	
+}
+#form .box{
+	width: 300px;
+	height: 500px;
+	margin: 0 auto;
+}
+#form .box p{
+	width: 100%;
+	height: 100px;
+	font: 22px/100px "";
+	color: #161619;
+	text-align: center;
+	margin-bottom: 30px;
+}
+#form .box .user{
+	display: block;
+	width: 100%;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #111;
+    border: none;
+    border-bottom:#afafaf 1px solid;
+    margin-bottom: 30px;
+}
+#form .box .pssd{
+	display: block;
+	width: 100%;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #111;
+    border: none;
+    border-bottom:#afafaf 1px solid;
+    margin-bottom: 30px;
+}
+#form .box h3{
+	display: block;
+	width: 100%;
+	text-align: right;
+	font:12px/32px "";
+	color: #595959;
+}
+#form .box .btn{
+	display: block;
+	border: none;
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #bebebe;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+#form .box b{
+	display: block;
+	font:12px/32px "";
+	margin: 20px 0 10px 0;
+}
+#form .box img{
+	display: block;
+}
+=======
 
 
 
 
 
 
+>>>>>>> 5c95f421559dd1ccf1b21028c23ec24c1fc2e159
 #promise{
 	height: 100px;
 }
