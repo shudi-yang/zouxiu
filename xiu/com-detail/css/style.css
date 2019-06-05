@@ -126,52 +126,77 @@ nav ul li.active a{
 	border-right:none ;
 }
 
-#find{
-	padding-top:30px ;
-	padding-bottom: 100px;
+#main{
+	height:700px;
+} 
+#main .bigbox{
+	width: 1200px;
+	height: 700px;
 }
-#find ul{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap:wrap ;
+#main .bigbox .left{
+	float: left;
+	width: 580px;
+	height: 700px;
 }
-#find ul li{
-	height: 463px;
-	width: 300px;
-	padding: 5px 0;
+#main .bigbox .left-t {
+	padding-top: 30px;
+	width: 580px;
+	height: 470px;
 }
-#find ul li div{
-	height: 446px;
-	width: 280px;
-	margin: 0 auto;
+#main .bigbox .left-t .msg2{
+	display: none;
 }
-#find ul li img{
-	width: 270px;
-	height: 330px;
+#main .bigbox .left-t .msg3{
+	display: none;
+}
+#main .bigbox .left-t img{
 	display: block;
-	margin: 0 auto;
+	width: 500px;
+	height: 450px;
 }
-#find ul li p{
-	font-size: 18px;
-	color: #111;
-	font-weight: 500;
-	margin-top: 10px;
-	padding: 0 20px;
+
+#main .bigbox .left-b{
+	padding: 0 50px;
+	width: 580px;
+	height: 80px;
 }
-#find ul li h3{
-	color: #ccc;
-	font:16px/36px "" ;
-	padding: 0 20px;
+#main .bigbox .left-b img{
+	float: left;
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin: 0 10px;
+	cursor: pointer;
 }
-#find ul li span{
-	font:18px/38px "" ;
-	color: #111;
-	font-weight: 500;
-	padding: 0 20px;
+#main .bigbox .left-b img.active{
+	box-shadow: 5px 5px 5px #111;
 }
-#find ul li div:hover{
-	box-shadow:  0px 0px 5px 5px rgba(0,0,0,.2);
+
+#main .bigbox .right{
+	float: right;
+	width: 550px;
+	height: 650px;
+	font-size: 16px;
 }
+#main .bigbox .right p{
+	height: 50px;
+	font: 16px/50px "";
+}
+#main .bigbox .right h3{
+	height: 50px;
+	font: 16px/50px "";
+}
+#main .bigbox .right .btncart{
+	margin-top: 300px;
+	width: 200px;
+	height: 50px;
+	border: none;
+	background-color: #c39a58;
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+}
+
 #promise{
 	height: 100px;
 }

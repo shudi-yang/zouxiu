@@ -63,7 +63,7 @@ class Shopping{
 	constructor(){
 		this.ocont = document.querySelector("#find ul");
 		console.log(this.ocont)
-		this.url = "http://localhost/htdocs/xiu/com-list/data/goods.json";
+		this.url = "http://localhost/xiu/com-list/data/goods.json";
 		this.init();
 		this.lilength = 0;
 	}

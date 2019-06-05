@@ -125,103 +125,24 @@ nav ul li.active a{
 #menu .menu1 li.li01 .menu2 ul li:last-child{
 	border-right:none ;
 }
-#banner{
-	padding: 30px 0;
+
+#main {
+	height: 300px;
 }
-#banner .swiper-container{
-	width: 1200px;
-	height: 610px;
-	overflow: hidden;
+#main .tab img{
+	width: 50px;
 }
-#banner .swiper-container .swiper-pagination-bullets{
-	bottom: 16px;
-}
-#banner .swiper-container .swiper-pagination-bullet{
-	width: 15px; height: 15px;
-	margin: 0 7px;
-	background: #333;
-}
-#banner .swiper-container .swiper-pagination-bullet-active{
-	background: #111;
-}
-	
-.title{
-	text-align: center;
-}
-.title p{
-	line-height: 76px;
-	font-size: 36px;
-	
-}
-#goods{
-	
-}
-#goods ul{
-	width: 1200px;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap:wrap ;
-}
-#goods ul li{
-	margin-bottom: 10px;
-	transition: 0.5s linear transform;
-}
-#goods ul li img{
+#main .tab span{
+	width: 60px;
+	height:40px;
+	line-height: 40px;
+	background: #99f;
+	color: #fff;
 	display: block;
-	width: 392px;
-	height: 285px;
-}
-#goods ul li:hover{
-	transform: scale(1.06);
-}
-#find{
-	padding-bottom: 120px;
-	
-}
-#find ul{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap:wrap ;
+	text-align: center;
 	cursor: pointer;
 }
-#find ul li{
-	height: 463px;
-	width: 300px;
-	padding: 5px 0;
-	
-}
-#find ul li div{
-	height: 446px;
-	width: 280px;
-	margin: 0 auto;
-}
-#find ul li img{
-	width: 270px;
-	height: 330px;
-	display: block;
-	margin: 0 auto;
-}
-#find ul li p{
-	font-size: 18px;
-	color: #111;
-	font-weight: 500;
-	margin-top: 10px;
-	padding: 0 20px;
-}
-#find ul li h3{
-	color: #ccc;
-	font:16px/36px "" ;
-	padding: 0 20px;
-}
-#find ul li span{
-	font:18px/38px "" ;
-	color: #111;
-	font-weight: 500;
-	padding: 0 20px;
-}
-#find ul li div:hover{
-	box-shadow:  0px 0px 5px 5px rgba(0,0,0,.2);
-}
+
 #promise{
 	height: 100px;
 }

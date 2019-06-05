@@ -58,4 +58,83 @@ class Index{
 new Index;
 
 
+//选项卡
+var aimg = document.querySelectorAll(".left-b img");
+var amsg = document.querySelectorAll(".left-t .msg");
+console.log(amsg);
+
+for (var i=0;i<aimg.length;i++) {
+	aimg[i].index = i;
+	aimg[i].onclick = function(){
+		for (var j=0;j<aimg.length;j++) {
+			aimg[j].className = "";
+			amsg[j].style.display = "none";
+		}
+		this.className ="active";
+		var index2 = this.index;
+		amsg[index2].style.display = "block";
+	}
+};
+
+//购物车
+class Set{
+	constructor(){
+		this.btncart = document.querySelector(".btncart");
+		this.addEvent();
+	}
+	addEvent(){
+		var that = this;
+		this.btncart.addEventListener("click",function(){
+				// 1.点击时存储当前的商品id
+				that.id = 1111;
+				// 2.准备设置cookie
+				that.setCookie()
+		})
+	}
+	setCookie(){
+		// 点击商品的情况
+		// 存cookie，存什么格式的字符
+			// 商品：对象		{id:,num:}
+			// 所有商品：数组	[{id:,num:},{id:,num:},{id:,num:}]
+		
+		// 3.先获取cookie用来判断第一次还是后面的次
+		this.goods = getCookie("shangpin");
+		// 开始判断
+		if(this.goods){
+			// 5.之后点击，先解析数据
+			this.goods = JSON.parse(this.goods)
+			// 6.判断点的是否是重复数据
+			var onoff = true;
+			for(var i=0;i<this.goods.length;i++){
+				if(this.goods[i].id == this.id){
+					// 是重复数据
+					this.goods[i].num ++;
+					onoff = false;
+				}
+			}
+			// 7.点的是新数据
+			if(onoff){
+				this.goods.push({
+					id:this.id,
+					num:1
+				})
+			}
+		}else{
+			// 4.第一次点击，直接存
+			this.goods = [{
+				id:this.id,
+				num:1
+			}]
+		}
+		// 8.以上都只是在操作数组，最后要设置回cookie
+		setCookie("shangpin",JSON.stringify(this.goods))
+	}
+}
+
+new Set;
+
+
+
+
+
 
