@@ -82,7 +82,7 @@ class Shopping{
 		console.log(this.res);
 		var str = "";
 		for (var i=0;i<this.res.length;i++) {
-			str += `<li>
+			str += `<li index="${this.res[i].goodsId}">
 						<div class="box">
 							<img  src="${this.res[i].src}"/>
 							<p>Burberry</p>
@@ -98,12 +98,15 @@ class Shopping{
 		this.lazy()
 	}
 	addEvent(){
+		var that = this
 		for (var i=0;i<this.ali.length;i++) {
 			this.ali[i].style.cursor = "pointer";
+			
 			this.ali[i].onclick = function(){
-				location.href = "../com-detail/detail.html";
+					var goodsId = this.getAttribute("index");
+					location.href = "../com-detail/detail.html?goodsId="+goodsId;
+				}
 			}				
-		}
 	}
 	lazy(){
 		this.clientH = document.documentElement.clientHeight;

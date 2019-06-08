@@ -61,7 +61,7 @@ new Index;
 class Cart{
     constructor(){
         this.tbody = document.querySelector("tbody");
-        this.url = "http://localhost/xiu/cart/data/goods.json";
+        this.url = "http://localhost/htdocs/xiu/cart/data/goods.json";
 
         // 请求所有数据
         this.init();
@@ -76,13 +76,12 @@ class Cart{
             	console.log(res)
                 that.res = JSON.parse(res)
                 // 拿到cookie
-                that.getCookie()
+                that.getlocal()
             }
         })
     }
-    getCookie(){
-           console.log(getCookie("shangpin"))
-        this.goods = JSON.parse(getCookie("shangpin"));
+    getlocal(){
+        this.goods = JSON.parse(localStorage.getItem("shangpin"));
         console.log(this.goods)
         // 渲染页面
         this.display();
@@ -97,7 +96,7 @@ class Cart{
             for(var j=0;j<this.goods.length;j++){
                 // 两相对比，发现id重复，那就是要加入购物车的商品
                 if(this.res[i].goodsId == this.goods[j].id){
-                    str += `<tr index="${this.goods[j].id}">
+                    str += `<tr index="${this.goods[j].id}" align="center">
                                 <td><input type="checkbox"></td>
                                 <td><img src="${this.res[i].src}"></td>
                                 <td>${this.res[i].name}</td>
@@ -146,7 +145,7 @@ class Cart{
                 break;
             }
         }
-        setCookie("shangpin",JSON.stringify(this.goods))
+        localStorage.setItem("shangpin",JSON.stringify(this.goods))
     }
 }
 

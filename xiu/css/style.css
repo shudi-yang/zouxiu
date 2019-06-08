@@ -61,6 +61,12 @@ nav ul li.active{
 nav ul li.active a{
 	color: #c39a58;
 }
+nav ul li:hover{
+	border-bottom: 2px solid #C39A58;
+}
+nav ul li:hover a{
+	color: #c39a58;
+}
 #menu{
 	background-color: #f7f7f7;
 	height: 44px;

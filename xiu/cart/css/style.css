@@ -127,16 +127,33 @@ nav ul li.active a{
 }
 
 #main {
-	height: 300px;
+}
+#main a{
+	display: block;
+	font: 18px/60px "";
+	color: #111;
+}
+#main .tab{
+	
+}
+#main .tab thead tr{
+	height: 40px;
+	border-bottom: 1px solid #AAA;
+	
+}
+#main .tab tbody tr{
+	height: 160px;
+	border-bottom: 1px solid #AAA;
 }
 #main .tab img{
-	width: 50px;
+	width: 150px;
+	height: 150px;
 }
 #main .tab span{
-	width: 60px;
-	height:40px;
-	line-height: 40px;
-	background: #99f;
+	width: 40px;
+	height:20px;
+	line-height: 20px;
+	background: #c39a58;
 	color: #fff;
 	display: block;
 	text-align: center;

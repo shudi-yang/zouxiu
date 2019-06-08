@@ -127,16 +127,16 @@ nav ul li.active a{
 }
 
 #main{
-	height:700px;
+	height:650px;
 } 
 #main .bigbox{
 	width: 1200px;
-	height: 700px;
+	height: 600px;
 }
 #main .bigbox .left{
 	float: left;
 	width: 580px;
-	height: 700px;
+	height: 600px;
 }
 #main .bigbox .left-t {
 	padding-top: 30px;
@@ -179,15 +179,21 @@ nav ul li.active a{
 	font-size: 16px;
 }
 #main .bigbox .right p{
+	padding-top: 15px;
 	height: 50px;
 	font: 16px/50px "";
+}
+#main .bigbox .right h4{
+	height: 50px;
+	font: 14px/50px "";
+	border-bottom: 1px solid #aaa;
 }
 #main .bigbox .right h3{
 	height: 50px;
 	font: 16px/50px "";
 }
 #main .bigbox .right .btncart{
-	margin-top: 300px;
+	margin-top: 200px;
 	width: 200px;
 	height: 50px;
 	border: none;
